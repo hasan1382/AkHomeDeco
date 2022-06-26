@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK-HomeDecoration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+        integrity="sha384-/frq1SRXYH/bSyou/HUp/hib7RVN1TawQYja658FEOodR/FQBKVqT9Ol+Oz3Olq5" crossorigin="anonymous" />
+
+    <style>
+        :root {
+            --colorTextHeader: #fbc100;
+            --bgheader: #262626;
+            --colorText: #fff;
+            --colorActive: #f5f5f5;
+        }
+
+        @font-face {
+            font-family: 'Esttedad';
+            src: url("Estedad-Regular.ttf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ccc;
+            direction: rtl;
+            font-family: Esttedad;
+        }
+
+        header {
+            background-color: var(--bgheader);
+            position: fixed;
+            width: 100%;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: var(--colorText);
+            text-decoration: none;
+        }
+
+        .navbar {
+            min-height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 24px;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .nav-branding {
+            font-size: 1.5rem;
+            position: fixed;
+            color: var(--colorTextHeader);
+            margin-left: 5%;
+            position: absolute;
+            left: 1rem;
+        }
+
+        .nav-link {
+            transition: 0.7s ease;
+            color: var(--colorTextHeader);
+        }
+
+        .nav-link:hover {
+            padding: 1rem;
+            background-color: var(--colorTextHeader);
+            color: var(--colorText);
+            border-radius: 8px;
+        }
+
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+
+        .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            background-color: var(--colorText);
+        }
+
+        #active {
+            padding: 1rem;
+            color: var(--colorActive);
+            background-color: var(--colorTextHeader);
+            border-radius: 8px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100vh;
+        }
+
+        .sliderHeader {
+            display: flex;
+            width: 99%;
+            border-radius: 8px;
+            height: 58vh;
+            margin: 0.5%;
+            margin-top: 5em;
+            z-index: -1;
+        }
+
+        .cart {
+            margin: 0.5%;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .body {
+            display: flex;
+            height: 70vh;
+            width: 50vw;
+            position: relative;
+            animation: slider 8s infinite alternate;
+        }
+
+        .imgSlider {
+            width: 50rem;
+            border-radius: 8px;
+            height: 55vh;
+        }
+
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+
+            20% {
+                left: 50rem;
+            }
+
+            40% {
+                left: 100rem;
+            }
+
+            60% {
+                left: 150rem;
+            }
+
+            80% {
+                left: 200rem;
+            }
+
+            100% {
+                left: 250rem;
+            }
+        }
+
+
+
+
+
+        .bodyContent {
+            display: flex;
+            height: vh;
+            padding: 1rem;
+            width: 98%;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--bgheader);
+            border-radius: 15px;
+        }
+
+        h3 {
+            font-size: 1.1em;
+            color: #ccc;
+        }
+
+        h1 {
+            margin: 1rem 0;
+            color: var(--colorTextHeader);
+        }
+
+        .cart1 {
+            width: 50%;
+            color: var(--colorText);
+            line-height: 2.2rem;
+            text-align: justify;
+            padding: 1rem;
+        }
+
+        .cart2 {
+            margin: 1rem;
+            width: 25%;
+            border-radius: 18px;
+            /* background-color: red; */
+            background-color: var(--colorTextHeader);
+            color: var(--bgheader);
+
+        }
+
+        .cart2 img {
+            width: 70%;
+            border-radius: 35px;
+        }
+
+        .textSampleProduct {
+            margin: 1rem;
+        }
+
+        .cartImageSampleProduct {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 1rem;
+            border: 2px solid var(--colorTextHeader);
+            border-radius: 18px;
+        }
+
+        .cart3 {
+            width: 25%;
+            height: 80%;
+            color: var(--colorActive);
+        }
+
+        .item3-1,
+        .item3-2 {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem;
+            height: 40%;
+            margin: 1rem 0;
+            color: var(--bgheader);
+            border-radius: 15px;
+            background-color: var(--colorTextHeader);
+        }
+
+        .cart3 .bi {
+            font-size: 2.5em;
+        }
+
+        .whatsWork {
+            text-align: center;
+            width: 98%;
+            border-radius: 15px;
+            margin-top: 1rem;
+            padding: 1rem;
+            background-color: var(--colorTextHeader);
+        }
+
+        .cartItems {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* height: 80%; */
+        }
+
+        .bCart {
+            font-size: 2.5em;
+        }
+
+        .cartItem {
+            padding: 2rem;
+            text-align: right;
+            color: var(--colorText);
+            width: 100%;
+            border-radius: 15px;
+            margin: 1rem;
+            box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.6), 0px 0px 3px rgba(0, 0, 0, 0.6);
+            height: 100%;
+            background-color: var(--bgheader);
+        }
+
+        .textHeadCart {
+            font-size: 1.2em;
+        }
+
+        .txtWork {
+            font-weight: bolder;
+            font-size: 2em;
+        }
+
+        .sampleProduct2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 1rem;
+            width: 98%;
+            padding: 2rem;
+            border-radius: 15px;
+            background-color: var(--bgheader);
+        }
+
+        .TextSample2 {
+            color: var(--colorText);
+        }
+
+        .product2 {
+            color: var(--bgheader);
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .productSample2Right {
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            flex-direction: column;
+            height: 95%;
+        }
+
+        .productSample2Left {
+            width: 50%;
+            height: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .sampleSampleProduct2Top {
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: var(--colorTextHeader);
+            border-radius: 15px;
+        }
+
+        .sampleSampleProduct2Down {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 50%;
+        }
+
+        .sampleSampleProduct2DownRigth,
+        .sampleSampleProduct2DownLeft {
+            width: 50%;
+            height: 100%;
+            padding: 4rem;
+            background-color: var(--colorTextHeader);
+            border-radius: 15px;
+        }
+
+        .sampleSampleProduct2DownRigth {
+            margin-left: 1rem;
+        }
+
+        .imageProduct2 img {
+            width: 15vw;
+            height: 30vh;
+            margin-left: 2vh;
+            border-radius: 15px;
+        }
+
+        .sampleSampleProduct2DownRigth,
+        .sampleSampleProduct2DownLeft {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .textCartProduct {
+            margin: 2rem;
+            text-align: center;
+        }
+
+        .textCartProduct p:nth-child(1) {
+            text-shadow: 0px 0px 3px var(--bgheader);
+        }
+
+        .textCartProduct p:nth-child(2) {
+            font-size: 1.5rem;
+        }
+
+        .productCart {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 70vh; */
+            width: 97%;
+            border-radius: 15px;
+            padding: 1rem;
+            background-color: var(--bgheader);
+        }
+
+        .itemProductCart {
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            height: 90%;
+            border-radius: 15px;
+            margin: 1rem;
+            background-color: var(--colorTextHeader);
+        }
+
+        #productOneCart {
+            list-style-type: square;
+        }
+
+        .productOneCart {
+            text-align: center;
+        }
+
+        .productOneCart p:nth-child(1) {
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .productOneCart p:nth-child(2) {
+            margin: 1rem;
+        }
+
+        .btnBuy {
+            padding: 0.5rem 10rem;
+            margin: 1rem;
+            border-radius: 15px;
+            color: var(--colorText);
+            background-color: var(--bgheader);
+        }
+
+        .otherproduct {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--colorTextHeader);
+            width: 98%;
+            padding: 0.5rem;
+            border-radius: 15px;
+            height: 68%;
+        }
+
+        .itemotherProduct {
+            width: 95%;
+            height: 95%;
+            background-color: var(--bgheader);
+            border-radius: 15px;
+            margin: 1rem;
+            color: var(--colorText);
+        }
+
+        .otherProductTop,
+        .othertProductDown {
+            height: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .othertProductDown {
+            padding: 1rem
+        }
+
+        .othertProductDown p:nth-child(1) {
+            color: var(--colorTextHeader);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .otherProductTop img {
+            width: 100%;
+            height: 100%;
+            border-radius: 15px 15px 0 0;
+        }
+
+        .WhyAkHome {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* height: 65%; */
+            width: 98%;
+            padding: 1rem;
+            border-radius: 15px;
+            background-color: var(--colorTextHeader);
+        }
+
+        .itemswhyAkHome {
+            margin: 1rem;
+            border-radius: 15px;
+            width: 95%;
+            height: 90%;
+            color: var(--colorText);
+            padding: 1.5rem;
+            background-color: var(--bgheader);
+        }
+
+        .itemswhyAkHome p:nth-child(1) {
+            color: var(--colorTextHeader);
+            font-size: 3em;
+        }
+
+        .itemswhyAkHome p:nth-child(2) {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 0.5rem;
+        }
+
+        .foter {
+            display: flex;
+            justify-content: space-around;
+            padding: 1rem;
+            width: 98%;
+            border-radius: 15px 15px 0 0;
+            background-color: #262626;
+            color: var(--colorText);
+
+        }
+
+        .bi-instagram,
+        .bi-whatsapp {
+            margin-left: 0.3rem;
+        }
+
+        .foter a {
+            color: var(--colorTextHeader);
+        }
+
+        @media(max-width:1015px) {
+            .hamburger {
+                display: block;
+            }
+
+            .bodyContent {
+                flex-direction: column;
+            }
+
+            .cartItems {
+                flex-direction: column;
+            }
+
+            .sampleProduct2 {
+
+                flex-direction: column;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                gap: 0;
+                flex-direction: column;
+                background-color: #262626;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+            }
+
+            .nav-item {
+                margin: 16px 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .sliderHeader {
+                flex-wrap: wrap;
+                flex-direction: row;
+                z-index: -1;
+                margin: 0;
+            }
+
+            .cart:nth-child(1) {
+                display: none;
+            }
+
+            img {
+                height: 40%;
+            }
+
+            .headerContent {
+                flex-direction: column;
+            }
+
+            .text {
+                width: 100%;
+                padding: 2rem;
+            }
+
+            .productCart {
+                flex-direction: column;
+            }
+
+            .sampleProduct2,
+            .productCart {
+                padding: 1rem;
+            }
+
+            .bodyContent,
+            .sliderHeader,
+            .cart1,
+            .cart2,
+            .cart3,
+            .sampleProduct2,
+            .productSample2Right,
+            .productSample2Left,
+            .productCart,
+            .itemProductCart,
+            .bodyContent,
+            .whatsWork,
+            .sampleProduct2,
+            .textCartProduct,
+            .productCart,
+            .otherproduct,
+            .WhyAkHome {
+                width: 100%;
+
+            }
+
+            .btnBuy {
+                padding: 0.5rem 5rem;
+            }
+
+            .productOneCart {
+                padding-top: 1rem;
+            }
+
+            .otherproduct {
+                height: auto;
+            }
+
+            .otherproduct,
+            .WhyAkHome {
+                flex-direction: column;
+            }
+
+            .foter {
+                flex-direction: column;
+            }
+            .foter p{
+                padding:1rem;
+            }
+            .TextSample2{
+                margin-bottom:2rem;
+            }
+            .sampleProduct2{
+                padding: 2rem;
+            }
+            .productSample2Left{
+                width:100%;
+            }
+            .cart{
+                margin-top:6rem;
+            }
+            .bodyContent{
+                margin-top:6rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 p class="nav-branding"><strong>آک هوم دکوراسیون</strong></h1>
+
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" id="active" class="nav-link"><i class="bi bi-house"></i>&nbsp;خانه</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-file-earmark-person"></i>&nbsp;رزومه</a>
+                </li>
+                <li class="nav-item">
+                    <a href="Products.html" class="nav-link"><i class="bi bi-folder2-open"></i>&nbsp;محصولات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-folder2-open"></i>&nbsp;خدمات</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-telephone"></i>&nbsp;ارتباط با ما</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="bi bi-person"></i>&nbsp;درباره ما</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="sliderHeader">
+            <div class="cart">
+                <div class="body">
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/1.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/2.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/3.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/4.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/5.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/6.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="cart">
+                <div class="body">
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/7.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/8.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/9.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/10.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/11.jpg" />
+                    </div>
+                    <div class="item">
+                        <img class="imgSlider" src="image/slider info/12.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bodyContent">
+            <div class="cart1">
+                <h3>طراح و اجرا کننده دکوراسیون های داخلی</h3>
+                <h1>آک هوم دکوراسیون</h1>
+                <h2><strong>محصولات</strong></h2>
+                <p>
+                    امروزه با توجه به آپارتمان نشینی و کوچک شدن ابعاد خانه و ب طبع آن کمتر شدن فضای قابل استفاده در
+                    منازل ، راهکارهای متنوعی در جهت استفاده بهینه از فضای خانه به کار گرفته می شود .
+                    تخت خواب کمجا ( تخت خواب جکی و یا تخت خواب تاشو) یکی از این روشهاست که برای استفاده هرچه بهتر از
+                    فضای اتاق خواب طراحی شده است ، لذا گروه تولیدی آک هوم مفتخر است که با طراحی و تولید این کالا مطابق
+                    نیاز شما با طرح و ابعاد دلخواهتان و همچنین با کلیه ی خدمات پس از فروش ؛ جایی در خانه ی پر مهر شما
+                    داراست .
+
+                <ul>
+                    <li>🚩 ده سال گارانتی محصولات</li>
+                    <li> 🚩 قابلیت ارسال کالا به سراسر کشور </li>
+                </ul>
+
+                🟠 مجموعه دکوراسیون داخلی آک هوم
+                از سال 1395 با محوریت تولید محصولات کمجا جهت رفاه حال شما
+                تاسیس گردید .
+                </p>
+
+
+                <p> (( با سپاس از حسن انتخاب شما
+                    <strong>مجموعه‌ی دکوراسیون داخلی آک هوم</strong> ))
+                </p>
+            </div>
+            <div class="cart2">
+                <div class="cartImageSampleProduct">
+                    <img src="image/slider info/takhte.png" alt="">
+                    <p class="textSampleProduct"><strong>تخت خواب تاشو</strong></p>
+                    <p>اولین و برترین شرکت سازنده تخت های تاشو</p>
+                </div>
+            </div>
+            <div class="cart3">
+                <div class="item3-1">
+                    <p><i class="bi bi-clock-history"></i></p>
+                    <p class="pHeadSampleProduct"><strong>خدمت اول</strong></p>
+                    <p>انجام کلیه امور بازسازی و تعمیرات خانه </p>
+                </div>
+                <div class="item3-2">
+                    <p><i class="bi bi-gear-fill"></i></p>
+                    <p><strong>خدمت دوم</strong></p>
+                    <p>انواع کابینت ، درب ضد سرقت ، کناف کاری</p>
+                </div>
+            </div>
+        </div>
+        <div class="whatsWork">
+            <p>آک هوم دکوراسیون</p>
+            <p class="txtWork">خدمات</p>
+            <div class="cartItems">
+                <div class="cartItem">
+                    <p><i class="bCart bi bi-alarm"></i></i></p>
+                    <p class="textHeadCart">سرعت</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora quo qui harum, similique
+                        dolorem laborum, natus nulla incidunt facilis libero voluptatum ut, amet optio enim dolore
+                        maxime. A, in animi.</p>
+                </div>
+                <div class="cartItem">
+                    <p><i class="bCart bi bi-gear"></i></p>
+                    <p class="textHeadCart">کیفیت</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium natus adipisci voluptatibus
+                        eveniet nesciunt suscipit. Corrupti consectetur culpa sequi id cupiditate libero illo
+                        distinctio, rem praesentium at repudiandae? Sequi, excepturi.</p>
+
+                </div>
+                <div class="cartItem">
+                    <p><i class="bCart bi bi-cash-coin"></i></p>
+                    <p class="textHeadCart">قیمت</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium natus adipisci voluptatibus
+                        eveniet nesciunt suscipit. Corrupti consectetur culpa sequi id cupiditate libero illo
+                        distinctio, rem praesentium at repudiandae? Sequi, excepturi.</p>
+
+                </div>
+                <div class="cartItem">
+                    <p><i class="bCart bi bi-wrench-adjustable"></i></p>
+                    <p class="textHeadCart">ضمانت</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium natus adipisci voluptatibus
+                        eveniet nesciunt suscipit. Corrupti consectetur culpa sequi id cupiditate libero illo
+                        distinctio, rem praesentium at repudiandae? Sequi, excepturi.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="sampleProduct2">
+            <div class="productSample2Right">
+                <h3>طراح و اجرا کننده دکوراسیون های داخلی</h3>
+                <h1>آک هوم دکوراسیون</h1>
+                <p class="TextSample2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore doloremque enim
+                    numquam sapiente
+                    corrupti totam beatae porro nostrum optio sint aspernatur, nesciunt explicabo aut sequi, molestiae a
+                    quia autem deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto itaque quos
+                    ducimus reprehenderit quis deserunt soluta fugit dicta qui minus aspernatur quas voluptatum, id
+                    delectus, nemo deleniti. A, repellat! Omnis.</p>
+            </div>
+            <div class="productSample2Left">
+                <div class="sampleSampleProduct2Top">
+                    <div class="product2">
+                        <div class="imageProduct2">
+                            <img src="image/slider info/12.jpg" />
+                        </div>
+                        <div class="textProduct2">
+                            <p>این یک متن تستی است</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis dolorum enim odio quod
+                                modi,
+                                sint nisi suscipit ratione doloremque exercitationem reiciendis consequuntur sit.
+                                Laudantium
+                                laboriosam excepturi, voluptatem soluta illo commodi!</p>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="sampleSampleProduct2Down">
+                    <div class="sampleSampleProduct2DownRigth">
+                        پروژه
+                    </div>
+                    <div class="sampleSampleProduct2DownLeft">پروژه</div>
+                </div>
+            </div>
+        </div>
+        <div class="textCartProduct">
+            <p>آک هوم دکوراسیون</p>
+            <p><b>نمونه محصلات ما با قیمت و جزئیات</b></p>
+            <p>در زیر نمونه محصولات و پروژه ای هایی که انجام داده ای شرکت قابل مشاهده است</p>
+        </div>
+        <div class="productCart">
+            <div class="itemProductCart">
+                <div class="productOneCart">
+                    <p>تخت خواب تاشو</p>
+                    <p>10.000.000&nbsp;تومان</p>
+                    <ul id="productOneCart">
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                    </ul>
+                    <p class="btnBuy">سفارش</p>
+                </div>
+            </div>
+            <div class="itemProductCart">
+                <div class="productOneCart">
+                    <p>تخت خواب تاشو</p>
+                    <p>10.000.000&nbsp;تومان</p>
+                    <ul id="productOneCart">
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                    </ul>
+                    <p class="btnBuy">سفارش</p>
+                </div>
+            </div>
+            <div class="itemProductCart">
+                <div class="productOneCart">
+                    <p>تخت خواب تاشو</p>
+                    <p>10.000.000&nbsp;تومان</p>
+                    <ul id="productOneCart">
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                        <li>ویژگی</li>
+                    </ul>
+                    <p class="btnBuy">سفارش</p>
+                </div>
+            </div>
+        </div>
+        <div class="textCartProduct">
+            <p>مجموعه دکوراسیون داخلی آک هوم</p>
+            <p><b>دیگر محصولات ما</b></p>
+        </div>
+        <div class="otherproduct">
+            <div class="itemotherProduct">
+                <div class="otherProductTop">
+                    <img src="image/slider info/1.jpg" />
+                </div>
+                <div class="othertProductDown">
+                    <p>کابینت</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit excepturi quia quo
+                        magnam delectus, esse autem unde sit soluta dolore cumque libero voluptas error perspiciatis
+                        voluptatibus? Quia, eum consequuntur.</p>
+                </div>
+            </div>
+            <div class="itemotherProduct">
+                <div class="otherProductTop">
+                    <img src="image/slider info/10.jpg" />
+                </div>
+                <div class="othertProductDown">
+                    <p>درب ضد سرقت</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit excepturi quia quo
+                        magnam delectus, esse autem unde sit soluta dolore cumque libero voluptas error perspiciatis
+                        voluptatibus? Quia, eum consequuntur.</p>
+                </div>
+            </div>
+            <div class="itemotherProduct">
+                <div class="otherProductTop">
+                    <img src="image/slider info/11.jpg" />
+                </div>
+                <div class="othertProductDown">
+                    <p>درب و پنچره های دوجداره</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit excepturi quia quo
+                        magnam delectus, esse autem unde sit soluta dolore cumque libero voluptas error perspiciatis
+                        voluptatibus? Quia, eum consequuntur.</p>
+                </div>
+            </div>
+            <div class="itemotherProduct">
+                <div class="otherProductTop">
+                    <img src="image/slider info/8.jpg" />
+                </div>
+                <div class="othertProductDown">
+                    <p>کناف </p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis fugit excepturi quia quo
+                        magnam delectus, esse autem unde sit soluta dolore cumque libero voluptas error perspiciatis
+                        voluptatibus? Quia, eum consequuntur.</p>
+                </div>
+            </div>
+        </div>
+        <div class="textCartProduct">
+            <p>آک هوم دکوراسیون</p>
+            <p><b>چرا باید مجموعه آک هوم دکوراسیون را انتخاب کنیم </b></p>
+            <p>در موارد زیر بیشتر توضیح خواهیم داد تا از انتخاب خود مطمئن باشید</p>
+        </div>
+        <div class="WhyAkHome">
+            <div class="itemswhyAkHome">
+                <p><i class="bi bi-clock"></i></p>
+                <p>زمان</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod necessitatibus minima iste provident
+                    dolor quis quas nostrum labore deleniti! Tempora eveniet numquam veritatis, dolorum in molestias
+                    necessitatibus? Eum, asperiores odit.</p>
+            </div>
+            <div class="itemswhyAkHome">
+                <p><i class="bi bi-currency-dollar"></i></p>
+                <p>قیمت</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod necessitatibus minima iste provident
+                    dolor quis quas nostrum labore deleniti! Tempora eveniet numquam veritatis, dolorum in molestias
+                    necessitatibus? Eum, asperiores odit.</p>
+            </div>
+            <div class="itemswhyAkHome">
+                <p><i class="bi bi-hammer"></i></p>
+                <p>کیفیت</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod necessitatibus minima iste provident
+                    dolor quis quas nostrum labore deleniti! Tempora eveniet numquam veritatis, dolorum in molestias
+                    necessitatibus? Eum, asperiores odit.</p>
+            </div>
+        </div>
+        <div class="textCartProduct">
+            <p>آک هوم دکوراسیون</p>
+            <p><b>چرا باید مجموعه آک هوم دکوراسیون را انتخاب کنیم </b></p>
+            <p>همه موارد در بالا توضیح داده شد ، برای دیدن دیگر محصولات میتواید به بخش محصولات مراجعه کنید</p>
+        </div>
+        <div class="foter">
+            <p>آدرس : </p>
+            <p> <i class="bi bi-instagram"></i>اینستاگرام : <a
+                    href=“instagram://user?username=pjrfigueiredo”>AkHomeDecoratino</a></p>
+            <p><i class="bi bi-whatsapp"></i> واتساپ : <a
+                    href="whatsapp:contact=09160269614@s.whatsapp.com&message=Id like to chat with you">09160269614</a>
+            </p>
+        </div>
+    </main>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        })
+        document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }))
+        window.addEventListener('scroll', (event) => {
+            let scroll = Math.floor(document.documentElement.scrollTop)
+            if (scroll >= 18) {
+                console.log("shod");
+            }
+        })
+    </script>
+</body>
+
+</html>
